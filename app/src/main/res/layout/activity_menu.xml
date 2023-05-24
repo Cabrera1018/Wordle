@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu"
+    android:background="@color/fondo">
+
+    <TextView
+        android:id="@+id/tWordle"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textStyle="bold"
+        android:text="WORDLE"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/tFrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tWordle"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="70dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Pon aprueba tus habilidades"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tOpcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tFrase"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/open_sans"
+        android:textStyle="bold"
+        android:text="Selecciona una opción"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/bJugar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tOpcion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/boton_deforme1"
+        android:padding="15dp"
+        android:text="Jugar"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bComojugar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bJugar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/boton_deforme2"
+        android:fontFamily="@font/open_sans"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="15dp"
+        android:text="¿Como jugar?"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bSalir"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bComojugar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/boton_deforme1"
+        android:padding="15dp"
+        android:text="Salir"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+</RelativeLayout>

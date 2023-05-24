@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fAmarillo">#fac710</color>
+    <color name="bAmarillo">#fab900</color>
+    <color name="fNormal">#4f5779</color>
+    <color name="bNormal">#72778b</color>
+    <color name="fVerde">#87c34f</color>
+    <color name="bVerde">#038e16</color>
+    <color name="fondo">#3e414d</color>
+    <color name="fGrisAzul">#425286</color>
+    <color name="gris">#363839</color>
+</resources>

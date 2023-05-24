@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".Niveles">
+
+
+    <TextView
+        android:id="@+id/niveles"
+        android:layout_below="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"
+        android:text="NIVELES"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/trofeo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/niveles"
+        app:srcCompat="@drawable/tt" />
+
+    <TextView
+        android:id="@+id/elige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trofeo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:text="Elige un modo"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/letras4"
+        android:layout_below="@id/elige"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/c_amarillo"
+        android:text="Palabras de 4 letras"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/letras5"
+        android:layout_below="@id/letras4"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/c_amarillo"
+        android:text="Palabras de 5 letras"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/letras6"
+        android:layout_below="@id/letras5"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/c_amarillo"
+        android:text="Palabras de 6 letras"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/c_azul"
+        android:padding="3dp"
+        app:srcCompat="@drawable/home" />
+
+
+</RelativeLayout>
