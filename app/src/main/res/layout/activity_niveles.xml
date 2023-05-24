@@ -19,13 +19,13 @@
         android:text="NIVELES"
         android:fontFamily="@font/open_sans"
         android:textColor="@color/white"
-        android:textSize="60dp"
+        android:textSize="60sp"
         android:textStyle="bold"/>
 
     <ImageView
         android:id="@+id/trofeo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/niveles"
         app:srcCompat="@drawable/tt" />
@@ -36,25 +36,31 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/trofeo"
         android:layout_centerHorizontal="true"
-        android:layout_margin="15dp"
-        android:text="Elige un modo"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/open_sans"
+        android:text="Elige un modo"
         android:textColor="@color/white"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/letras4"
-        android:layout_below="@id/elige"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_below="@id/elige"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/c_amarillo"
-        android:text="Palabras de 4 letras"
-        android:layout_margin="15dp"
         android:fontFamily="@font/open_sans"
+        android:text="Palabras de 4 letras"
         android:textColor="@color/white"
-        android:textSize="25dp"
-        android:textStyle="bold"/>
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/letras5"
@@ -67,7 +73,7 @@
         android:layout_margin="15dp"
         android:fontFamily="@font/open_sans"
         android:textColor="@color/white"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
 
     <Button
@@ -81,7 +87,7 @@
         android:layout_margin="15dp"
         android:fontFamily="@font/open_sans"
         android:textColor="@color/white"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
 
     <ImageView
@@ -93,7 +99,8 @@
         android:adjustViewBounds="true"
         android:background="@drawable/c_azul"
         android:padding="3dp"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/home"
+        android:contentDescription="Trofeo"/>
 
 
 </RelativeLayout>
