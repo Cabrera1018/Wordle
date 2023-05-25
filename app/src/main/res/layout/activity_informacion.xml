@@ -10,14 +10,16 @@
 
     <TextView
         android:id="@+id/textView"
+        android:layout_below="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:text="Adivina la palabra en 6 intentos"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
-        android:layout_marginTop="80dp"
-        android:textSize="25dp"
+        android:layout_marginTop="25dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
         android:textStyle="bold" />
 
     <TextView
@@ -33,7 +35,7 @@
         android:text="Despues de cada intento el color de los recuadros irán cambiando hasta encontrar la palabra oculta"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="" />
 
 
@@ -133,7 +135,7 @@
         android:text="La letra pintada en verde es parte de la palabra oculta y esta en el lugar correcto"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -222,7 +224,7 @@
         android:fontFamily="@font/open_sans"
         android:text="La letra pintada de amarillo es parte de la palabra pero esta en el lugar equivocado"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:layout_below="@+id/lPcorrecta" />
 
@@ -326,10 +328,10 @@
         android:text="La letra pintada en gris no esta dentro de la palabra"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="16dp" />
+        android:textSize="16sp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/home"
         android:layout_width="38dp"
         android:layout_height="35dp"
         android:layout_marginStart="20dp"

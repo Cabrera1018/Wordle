@@ -7,12 +7,13 @@
     android:background="@color/fondo"
     tools:context=".Nivel5">
 
+
     <ImageView
         android:id="@+id/home"
         android:layout_width="38dp"
         android:layout_height="35dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:adjustViewBounds="true"
         android:background="@drawable/teclado"
         android:padding="3dp"
@@ -24,11 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/home"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/open_sans"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:text="WORDLE"
         android:textColor="@color/white"
         android:textSize="50dp"
@@ -45,8 +45,8 @@
         android:orientation="horizontal">
 
 
-        <TextView
-            android:id="@+id/cuadro11"
+        <Button
+            android:id="@+id/r00"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -55,10 +55,12 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:text=""/>
 
-        <TextView
-            android:id="@+id/cuadro12"
+        <Button
+            android:id="@+id/r01"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -67,10 +69,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadr13"
+        <Button
+            android:id="@+id/r02"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -79,10 +82,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro14"
+        <Button
+            android:id="@+id/r03"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -91,10 +95,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro15"
+        <Button
+            android:id="@+id/r04"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -103,7 +108,8 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 2-->
@@ -117,8 +123,8 @@
         android:orientation="horizontal">
 
 
-        <TextView
-            android:id="@+id/cuadro21"
+        <Button
+            android:id="@+id/r10"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -127,10 +133,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro22"
+        <Button
+            android:id="@+id/r11"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -139,10 +146,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadr23"
+        <Button
+            android:id="@+id/r12"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -151,10 +159,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro24"
+        <Button
+            android:id="@+id/r13"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -163,10 +172,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro25"
+        <Button
+            android:id="@+id/r14"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -175,7 +185,8 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 3-->
@@ -186,11 +197,12 @@
         android:layout_below="@id/f2"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="SpeakableTextPresentCheck">
 
 
-        <TextView
-            android:id="@+id/cuadro31"
+        <Button
+            android:id="@+id/r20"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -199,10 +211,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro32"
+        <Button
+            android:id="@+id/r21"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -211,10 +224,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadr33"
+        <Button
+            android:id="@+id/r22"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -223,10 +237,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro34"
+        <Button
+            android:id="@+id/r23"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -235,10 +250,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro35"
+        <Button
+            android:id="@+id/r24"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -247,7 +263,8 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 4-->
@@ -261,8 +278,8 @@
         android:orientation="horizontal">
 
 
-        <TextView
-            android:id="@+id/cuadro41"
+        <Button
+            android:id="@+id/r30"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -271,10 +288,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro42"
+        <Button
+            android:id="@+id/r31"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -283,10 +301,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadr43"
+        <Button
+            android:id="@+id/r32"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -295,10 +314,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro44"
+        <Button
+            android:id="@+id/r33"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -307,10 +327,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro45"
+        <Button
+            android:id="@+id/r34"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -319,7 +340,8 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 5-->
@@ -333,8 +355,8 @@
         android:orientation="horizontal">
 
 
-        <TextView
-            android:id="@+id/cuadro51"
+        <Button
+            android:id="@+id/r40"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -343,10 +365,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro52"
+        <Button
+            android:id="@+id/r41"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -355,10 +378,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadr53"
+        <Button
+            android:id="@+id/r42"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -367,10 +391,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro54"
+        <Button
+            android:id="@+id/r43"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -379,10 +404,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <TextView
-            android:id="@+id/cuadro55"
+        <Button
+            android:id="@+id/r44"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -391,7 +417,85 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
+    </LinearLayout>
+
+    <!--Fila 6-->
+    <LinearLayout
+        android:id="@+id/f6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/f5"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/r50"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/c_azul"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <Button
+            android:id="@+id/r51"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/c_azul"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <Button
+            android:id="@+id/r52"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/c_azul"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <Button
+            android:id="@+id/r53"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/c_azul"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <Button
+            android:id="@+id/r54"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/c_azul"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Primera-->
@@ -399,137 +503,137 @@
         android:id="@+id/primera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/f5"
+        android:layout_below="@+id/f6"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="2dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/Q"
+        <Button
+            android:id="@+id/q"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="Q"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/W"
+        <Button
+            android:id="@+id/w"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="W"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/E"
+        <Button
+            android:id="@+id/e"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="E"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/R"
+        <Button
+            android:id="@+id/r"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="R"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/T"
+        <Button
+            android:id="@+id/t"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="T"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Y"
+        <Button
+            android:id="@+id/y"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="Y"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/U"
+        <Button
+            android:id="@+id/u"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="U"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/I"
+        <Button
+            android:id="@+id/i"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="I"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/O"
+        <Button
+            android:id="@+id/o"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="O"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/P"
+        <Button
+            android:id="@+id/p"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="P"
             android:textColor="@color/white"
@@ -548,130 +652,130 @@
         android:layout_marginBottom="2dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/A"
+        <Button
+            android:id="@+id/a"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="A"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/S"
+        <Button
+            android:id="@+id/s"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="S"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/D"
+        <Button
+            android:id="@+id/d"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="D"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/F"
+        <Button
+            android:id="@+id/f"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="F"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/G"
+        <Button
+            android:id="@+id/g"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="G"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/H"
+        <Button
+            android:id="@+id/h"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="H"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/J"
+        <Button
+            android:id="@+id/j"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="J"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/K"
+        <Button
+            android:id="@+id/k"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="K"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/L"
+        <Button
+            android:id="@+id/l"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="L"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Ñ"
+        <Button
+            android:id="@+id/ñ"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="Ñ"
             android:textColor="@color/white"
@@ -685,116 +789,136 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/segunda"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/Z"
+        <Button
+            android:id="@+id/z"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="Z"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/X"
+        <Button
+            android:id="@+id/x"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="X"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/C"
+        <Button
+            android:id="@+id/c"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="C"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/V"
+        <Button
+            android:id="@+id/v"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="V"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/B"
+        <Button
+            android:id="@+id/b"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="B"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/N"
+        <Button
+            android:id="@+id/n"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="N"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/M"
+        <Button
+            android:id="@+id/m"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="M"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/delete"
+        <Button
+            android:id="@+id/del"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="2"
             android:layout_margin="2dp"
-            android:background="@drawable/teclado"
+            android:background="@drawable/c_azul"
             android:gravity="center"
             android:text="⌫"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/enter"
+            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:text="ENTER"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/c_azul"
+            android:layout_marginEnd="2dp">
+        </Button>
 
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/answer"
+        android:layout_below="@id/tercera"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
 
 </RelativeLayout>

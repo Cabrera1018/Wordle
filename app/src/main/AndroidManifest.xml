@@ -27,9 +27,7 @@
         <activity
             android:name=".Informacion"
             android:exported="false" />
-        <activity
-            android:name=".Menu"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

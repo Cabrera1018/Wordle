@@ -64,17 +64,20 @@
 
     <Button
         android:id="@+id/letras5"
-        android:layout_below="@id/letras4"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_below="@id/letras4"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/c_amarillo"
-        android:text="Palabras de 5 letras"
-        android:layout_margin="15dp"
         android:fontFamily="@font/open_sans"
+        android:text="Palabras de 5 letras"
         android:textColor="@color/white"
         android:textSize="25sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/letras6"
