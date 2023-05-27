@@ -8,72 +8,117 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import org.json.JSONArray
+import java.io.IOException
 
 
 class Nivel5 : AppCompatActivity() {
 
     val tamañoPalabra = 5
     val intentos = 6
-
     var letras: MutableList<MutableList<Button>> = mutableListOf()
     lateinit var borrar: Button
     lateinit var enter: Button
-    lateinit var correct: TextView
     lateinit var palabraAleatoria: String
-    lateinit var palabrasDe5Letras: List<String>
+    lateinit var palabras: List<String>
     lateinit var letrasTeclado: MutableList<Button>
 
     // fila y columna actual
     var filaActual = 0
     var columnaActual = 0
 
-    // map de identificadores de recursos a caracteres para el teclado
+    // map de identificadores de botones a caracteres del teclado
     var keyMap: MutableMap<Button, String> = mutableMapOf()
 
+    //Representan las letras del teclado
     var abecedario = mutableSetOf(
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'ñ',
         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y'
     )
 
-    // candidate characters for each of the 5 positions of the word
-    var candidates = mutableListOf<MutableSet<Char>>(
-        abecedario.toMutableSet(), abecedario.toMutableSet(),
-        abecedario.toMutableSet(), abecedario.toMutableSet(), abecedario.toMutableSet()
+    // Letras habilitadas para las 5 posiciones (todas las letras letrasDisponibles)
+    var letrasDisponibles = mutableListOf(
+        abecedario.toMutableSet(), abecedario.toMutableSet(),abecedario.toMutableSet(),
+        abecedario.toMutableSet(), abecedario.toMutableSet()
     )
 
-    // the chars which are definitely not in the word because of a previous guess
-    var excluded = mutableSetOf<Char>()
-
-    var included = mutableSetOf<Char>()
+    // Letras que no están en la palabra
+    var noEstan = mutableSetOf<Char>()
+    // Letras que si están en la palabra
+    var siEstan = mutableSetOf<Char>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nivel5)
 
-        val menu: ImageView = findViewById(R.id.home)
+        //Inicia la lista del teclado
         letrasTeclado = mutableListOf()
+
+        //Llama a la funcion para obtener la palabra y la de los Cuadros
+        ObtenerPalabra()
+        Cuadros()
+
+        //Redirigir al menu
+        val menu: ImageView = findViewById(R.id.home)
         menu.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        test()
-        initialise_widgets()
     }
 
-    fun test() {
-        val inputStream = resources.openRawResource(R.raw.words)
-        val palabras = inputStream.bufferedReader().readLines()
+    fun ObtenerPalabra() {
+        val url = "https://api.datamuse.com/words?sp=?????&v=es&max=1000"
+        val client = OkHttpClient()
 
-        palabrasDe5Letras = palabras.filter {
-            it.length == tamañoPalabra
+        val request = Request.Builder()
+            .url(url)
+            .build()
+
+        client.newCall(request).enqueue(object : okhttp3.Callback {
+            override fun onFailure(call: okhttp3.Call, e: IOException) {
+                // Por si hay error
+            }
+
+            override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
+                //Se obtiene la respuesta de la API en forma de cadena de texto
+                val responseData = response.body?.string()
+
+                // Procesar la respuesta de la API
+                val palabras = procesarRespuesta(responseData)
+
+                // Seleccionar una palabra aleatoria de la lista
+                palabraAleatoria = palabras.random()
+
+                // Actualizar el TextView
+                runOnUiThread {
+                    //val textView = findViewById<TextView>(R.id.wordle)
+                    //textView.text = palabraAleatoria
+                }
+            }
+        })
+    }
+
+    private fun procesarRespuesta(responseData: String?): List<String> {
+        //Guarda todas las palabras extraídas de la respuesta de la API
+        palabras = mutableListOf()
+
+        try {
+            val jsonArray = JSONArray(responseData)
+            for (i in 0 until jsonArray.length()) {
+                val jsonObject = jsonArray.getJSONObject(i)
+                val palabra = jsonObject.getString("word")
+                (palabras as MutableList<String>).add(palabra)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
-        palabraAleatoria = palabrasDe5Letras.random()
 
-        val mensaje = "Palabra aleatoria de 5 letras: $palabraAleatoria"
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
+        return palabras
     }
 
-    fun initialise_widgets() {
-        val letter_buttons_ids = listOf(
+    fun Cuadros() {
+        val idCuadros = listOf(
             listOf(R.id.r00, R.id.r01, R.id.r02, R.id.r03, R.id.r04),
             listOf(R.id.r10, R.id.r11, R.id.r12, R.id.r13, R.id.r14),
             listOf(R.id.r20, R.id.r21, R.id.r22, R.id.r23, R.id.r24),
@@ -83,12 +128,12 @@ class Nivel5 : AppCompatActivity() {
         )
 
         // lista de botones que muestran las letras
-        for (row in 0..5) {
-            val list = mutableListOf<Button>()
-            for (col in 0..4) {
-                list.add(findViewById(letter_buttons_ids[row][col]))
+        for (fila in 0..5) {
+            val listaB = mutableListOf<Button>()
+            for (columna in 0..4) {
+                listaB.add(findViewById(idCuadros[fila][columna]))
             }
-            letras.add(list)
+            letras.add(listaB)
         }
 
         val idLetras = listOf(
@@ -98,25 +143,22 @@ class Nivel5 : AppCompatActivity() {
         )
 
         // listener para todas las teclas
-        val listener = teclas()
+        val listenerT = teclas()
 
         // Iniciar las teclas para el map
         for (k in idLetras) {
             val b = findViewById<Button>(k)
-            b.setOnClickListener(listener)
+            b.setOnClickListener(listenerT)
             keyMap.put(b, b.text.toString())
         }
 
-        // configurar el botón para borrar y el listener
-        borrar = findViewById<Button>(R.id.del)
+        // configurar el boton para borrar y el listener
+        borrar = findViewById(R.id.del)
         borrar.setOnClickListener(BorrarListener())
 
-        // configurar el botón enter y el listener
-        enter = findViewById<Button>(R.id.enter)
+        // configurar el boton enter y el listener
+        enter = findViewById(R.id.enter)
         enter.setOnClickListener(EnterListener())
-
-
-        correct = findViewById<TextView>(R.id.answer)
     }
 
 
@@ -127,31 +169,31 @@ class Nivel5 : AppCompatActivity() {
                 letras[filaActual][columnaActual].text = keyMap[(v as Button)]
                 ++columnaActual
             }
-            // Agregar esta línea para almacenar el botón en letrasTeclado
+            // Esta linea para almacenar el boton en letrasTeclado
             letrasTeclado.add(v as Button)
         }
     }
 
-    fun checkGuess(): Boolean {
+    fun RevisarIntento(): Boolean {
 
-        // Obtener la suposición del usuario
-        var guess = ""
+        // Obtener la suposicion del usuario
+        var intento = ""
         for (b in letras[filaActual])
-            guess += b.text
+            intento += b.text
 
 
-        // Verifica si la suposición es correcta
-        val found = palabrasDe5Letras.any { word ->
-            word.equals(guess, ignoreCase = true)
+        // Verifica si la suposicion es correcta
+        val encuentra = palabras.any { word ->
+            word.equals(intento, ignoreCase = true)
         }
 
-        if (!found) {
-            correct.text = "No existe"
+        if (!encuentra) {
+            Toast.makeText(applicationContext, "Palabra no encontrada", Toast.LENGTH_SHORT).show()
             return false
         }
 
-        // Suposición correcta: cambia el color de las letras
-        if (guess.uppercase() == palabraAleatoria.uppercase()) {
+        // Opcion correcta: cambia el color de las letras
+        if (intento.uppercase() == palabraAleatoria.uppercase()) {
             Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show()
             // Cambia el color de las letras a verde
             for (i in 0 until tamañoPalabra)
@@ -162,65 +204,48 @@ class Nivel5 : AppCompatActivity() {
                 val letraIngresada = letras[filaActual][i].text.toString().uppercase()
                 val letraSecreta = palabraAleatoria[i].toString().uppercase()
 
-                for (button in letrasTeclado) {
+                //Si la letra ingresada está en el lugar correcto
+                if (letraIngresada == letraSecreta) {
+                    letras[filaActual][i].setBackgroundResource(R.drawable.c_verde)
+                    letrasDisponibles[i] = mutableSetOf(letraSecreta[0])
+                    siEstan += letraIngresada[0].lowercaseChar()
 
+                    //Si la letra ingresada no está en el lugar correcto
+                } else if (letraIngresada in palabraAleatoria.uppercase()) {
+                    letras[filaActual][i].setBackgroundResource(R.drawable.c_amarillo)
+                    letrasDisponibles[i] -= mutableSetOf(letraIngresada[0].lowercaseChar())
+                    siEstan += letraIngresada[0].lowercaseChar()
 
-                    if (letraIngresada == letraSecreta) {
-                        letras[filaActual][i].setBackgroundResource(R.drawable.c_verde)
-                        button.setBackgroundResource(R.drawable.c_verde)
-                        candidates[i] = mutableSetOf(letraSecreta[0])
-                        included += letraIngresada[0].lowercaseChar()
-                    } else if (letraIngresada in palabraAleatoria.uppercase()) {
-                        letras[filaActual][i].setBackgroundResource(R.drawable.c_amarillo)
-                        button.setBackgroundResource(R.drawable.c_amarillo)
-                        candidates[i] -= mutableSetOf(letraIngresada[0].lowercaseChar())
-                        included += letraIngresada[0].lowercaseChar()
-                    } else {
-                        letras[filaActual][i].setBackgroundResource(R.drawable.c_gris)
-                        button.setBackgroundResource(R.drawable.c_gris)
-                        excluded += letraIngresada[0].lowercaseChar()
-                    }
+                    //Si la letra ingresada no está en la palabra
+                } else {
+                    letras[filaActual][i].setBackgroundResource(R.drawable.c_gris)
+                    noEstan += letraIngresada[0].lowercaseChar()
                 }
             }
 
-            excluded -= included
+            noEstan -= siEstan
             // Remueve las letras excluidas de los candidatos
             for (i in 0 until tamañoPalabra)
-                candidates[i] -= excluded
+                letrasDisponibles[i] -= noEstan
         }
-
         return true
     }
 
-      /*private fun actualizarColoresTeclado() {
-        for (button in letrasTeclado) {
-            val letra = button.text.toString().uppercase()
-            val char = letra[0]
-            if (char in included) {
-                button.setBackgroundResource(R.drawable.c_verde)
-            } else if (char in excluded) {
-                button.setBackgroundResource(R.drawable.c_gris)
-            } else {
-                button.setBackgroundResource(R.drawable.c_amarillo)
-            }
-        }
-    }*/
-
-
-    // Listener para el enter
+    // Para el enter
     inner class EnterListener : View.OnClickListener {
         override fun onClick(v: View?) {
             if (filaActual < intentos && columnaActual == tamañoPalabra) {
-                val valid_submission = checkGuess()
-                if (valid_submission) {
+                val chequear = RevisarIntento()
+                if (chequear) {
                     ++filaActual
                     columnaActual = 0  // Cambia de columna para otro intento
                 }
             }
 
-            // muestra la palabra correcta
+            // muestra la palabra correcta cuando se llega al numero maximo de intentos
             if (filaActual == intentos) {
-                correct.text = palabraAleatoria.uppercase()
+                Toast.makeText(applicationContext, palabraAleatoria.uppercase(), Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
@@ -228,7 +253,7 @@ class Nivel5 : AppCompatActivity() {
     // Para borrar
     inner class BorrarListener : View.OnClickListener {
         override fun onClick(v: View?) {
-            correct.text = ""
+
             if (columnaActual > 0) {
                 --columnaActual
                 letras[filaActual][columnaActual].text = ""
