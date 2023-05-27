@@ -113,7 +113,6 @@ class Nivel5 : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
         return palabras
     }
 
