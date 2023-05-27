@@ -48,6 +48,7 @@ class Nivel5 : AppCompatActivity() {
     var noEstan = mutableSetOf<Char>()
     // Letras que si están en la palabra
     var siEstan = mutableSetOf<Char>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nivel5)
@@ -92,8 +93,8 @@ class Nivel5 : AppCompatActivity() {
 
                 // Actualizar el TextView
                 runOnUiThread {
-                    //val textView = findViewById<TextView>(R.id.wordle)
-                    //textView.text = palabraAleatoria
+                    val textView = findViewById<TextView>(R.id.wordle)
+                    textView.text = palabraAleatoria
                 }
             }
         })
