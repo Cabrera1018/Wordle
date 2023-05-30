@@ -8,14 +8,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import org.w3c.dom.Text
 
-class Victoria : AppCompatActivity() {
+class Victoria6 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_victoria)
+        setContentView(R.layout.activity_victoria6)
 
         //Redirigir al menu
-        val menu: ImageView = findViewById(R.id.home)
-        menu.setOnClickListener {
+        val ds: ImageView = findViewById(R.id.home)
+        ds.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -23,7 +23,7 @@ class Victoria : AppCompatActivity() {
         //Jugar de nuevo
         val deNuevo: Button = findViewById(R.id.bVolverjugar)
         deNuevo.setOnClickListener {
-            val intent = Intent(this, Nivel5::class.java)
+            val intent = Intent(this, Nivel6::class.java)
             startActivity(intent)
         }
 
@@ -70,8 +70,8 @@ class Victoria : AppCompatActivity() {
         if (coloresBotones != null) {
             for (i in coloresBotones.indices) {
                 val colorButtonId = coloresBotones[i]
-                val row = (i / 5) + 1
-                val col = (i % 5) + 1
+                val row = (i / 6) + 1
+                val col = (i % 6) + 1
                 val buttonId = resources.getIdentifier("m$row$col", "id", packageName)
                 val button: Button = findViewById(buttonId)
                 button.setBackgroundResource(colorButtonId)

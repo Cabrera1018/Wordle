@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Victoria"
+    tools:context=".Victoria4"
     android:background="@color/fondo">
 
     <ImageView
@@ -21,7 +21,7 @@
         android:id="@+id/tCompletado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_below="@+id/home"
         android:textStyle="bold"
         android:textSize="32sp"
         android:fontFamily="@font/open_sans"
@@ -35,10 +35,10 @@
         android:layout_height="115dp"
         android:layout_below="@id/tCompletado"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/champion" />
 
@@ -111,17 +111,6 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/tvLetra5"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="4dp"
-            android:background="@drawable/c_verde"
-            android:gravity="center"
-            android:maxLength="1"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
 
@@ -131,17 +120,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lPcorrecta"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="horizontal">
 
 
         <Button
             android:id="@+id/m11"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -153,9 +145,12 @@
         <Button
             android:id="@+id/m12"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -166,9 +161,12 @@
         <Button
             android:id="@+id/m13"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -179,9 +177,12 @@
         <Button
             android:id="@+id/m14"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -189,18 +190,6 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck"/>
 
-        <Button
-            android:id="@+id/m15"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/c_azul"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 2-->
@@ -209,17 +198,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/f1"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="horizontal">
 
 
         <Button
             android:id="@+id/m21"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -230,9 +222,12 @@
         <Button
             android:id="@+id/m22"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -243,9 +238,12 @@
         <Button
             android:id="@+id/m23"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -256,9 +254,12 @@
         <Button
             android:id="@+id/m24"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -266,18 +267,6 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck"/>
 
-        <Button
-            android:id="@+id/m25"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/c_azul"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 3-->
@@ -286,8 +275,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/f2"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="horizontal"
         tools:ignore="SpeakableTextPresentCheck">
 
@@ -295,9 +284,12 @@
         <Button
             android:id="@+id/m31"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -308,9 +300,12 @@
         <Button
             android:id="@+id/m32"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -321,9 +316,12 @@
         <Button
             android:id="@+id/m33"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -334,9 +332,12 @@
         <Button
             android:id="@+id/m34"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -344,18 +345,6 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck"/>
 
-        <Button
-            android:id="@+id/m35"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/c_azul"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 4-->
@@ -364,17 +353,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/f3"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="horizontal">
 
 
         <Button
             android:id="@+id/m41"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -385,9 +377,12 @@
         <Button
             android:id="@+id/m42"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -398,9 +393,12 @@
         <Button
             android:id="@+id/m43"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -411,9 +409,12 @@
         <Button
             android:id="@+id/m44"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -421,18 +422,6 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck"/>
 
-        <Button
-            android:id="@+id/m45"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/c_azul"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 5-->
@@ -441,17 +430,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/f4"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="horizontal">
 
 
         <Button
             android:id="@+id/m51"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -462,9 +454,12 @@
         <Button
             android:id="@+id/m52"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -475,9 +470,12 @@
         <Button
             android:id="@+id/m53"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -488,9 +486,12 @@
         <Button
             android:id="@+id/m54"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -498,18 +499,6 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck"/>
 
-        <Button
-            android:id="@+id/m55"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/c_azul"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <!--Fila 6-->
@@ -518,17 +507,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/f5"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:orientation="horizontal">
 
 
         <Button
             android:id="@+id/m61"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -539,9 +531,12 @@
         <Button
             android:id="@+id/m62"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -552,9 +547,12 @@
         <Button
             android:id="@+id/m63"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -565,9 +563,12 @@
         <Button
             android:id="@+id/m64"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/c_azul"
             android:gravity="center"
             android:textColor="@color/white"
@@ -575,18 +576,6 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck"/>
 
-        <Button
-            android:id="@+id/m65"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/c_azul"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
     <Button
@@ -611,14 +600,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bVolverjugar"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_margin="5dp"
         android:background="@drawable/c_amarillo"
-        android:text="Probar otro nivel"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:text="Probar otro nivel"/>
 
 </RelativeLayout>

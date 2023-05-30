@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import org.w3c.dom.Text
 
-class Victoria : AppCompatActivity() {
+class Derrota4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_victoria)
+        setContentView(R.layout.activity_derrota4)
 
         //Redirigir al menu
         val menu: ImageView = findViewById(R.id.home)
@@ -23,7 +23,7 @@ class Victoria : AppCompatActivity() {
         //Jugar de nuevo
         val deNuevo: Button = findViewById(R.id.bVolverjugar)
         deNuevo.setOnClickListener {
-            val intent = Intent(this, Nivel5::class.java)
+            val intent = Intent(this, Nivel4::class.java)
             startActivity(intent)
         }
 
@@ -32,19 +32,6 @@ class Victoria : AppCompatActivity() {
         probarOtro.setOnClickListener {
             val intent = Intent(this, Niveles::class.java)
             startActivity(intent)
-        }
-
-        val palabraCorrecta = intent.getStringExtra("palabra_correcta")
-
-        if (palabraCorrecta != null) {
-            for (i in palabraCorrecta.indices) {
-                val letra = palabraCorrecta[i]
-                val ids = resources.getIdentifier("tvLetra${i + 1}", "id", packageName)
-                val messi: Button = findViewById(ids)
-                messi.text = letra.toString()
-            }
-        } else {
-            // Por si acaso
         }
 
         // Obtener la lista de intentos del intent
@@ -70,8 +57,8 @@ class Victoria : AppCompatActivity() {
         if (coloresBotones != null) {
             for (i in coloresBotones.indices) {
                 val colorButtonId = coloresBotones[i]
-                val row = (i / 5) + 1
-                val col = (i % 5) + 1
+                val row = (i / 4) + 1
+                val col = (i % 4) + 1
                 val buttonId = resources.getIdentifier("m$row$col", "id", packageName)
                 val button: Button = findViewById(buttonId)
                 button.setBackgroundResource(colorButtonId)

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Derrota"
+    tools:context=".Derrota6"
     android:background="@color/fondo">
 
     <ImageView
@@ -123,6 +123,19 @@
                 android:textColor="@color/white"
                 android:text=""/>
 
+            <Button
+                android:id="@+id/m16"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/c_azul"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text=""/>
+
         </LinearLayout>
 
         <!--Fila 2-->
@@ -185,6 +198,19 @@
 
             <Button
                 android:id="@+id/m25"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/c_azul"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text=""/>
+
+            <Button
+                android:id="@+id/m26"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="4dp"
@@ -269,6 +295,19 @@
                 android:textColor="@color/white"
                 android:text=""/>
 
+            <Button
+                android:id="@+id/m36"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/c_azul"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text=""/>
+
         </LinearLayout>
 
         <!--Fila 4-->
@@ -331,6 +370,19 @@
 
             <Button
                 android:id="@+id/m45"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/c_azul"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text=""/>
+
+            <Button
+                android:id="@+id/m46"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="4dp"
@@ -410,6 +462,18 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"/>
 
+            <Button
+                android:id="@+id/m56"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/c_azul"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text=""/>
         </LinearLayout>
 
         <!--Fila 6-->
@@ -477,6 +541,19 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/m66"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/c_azul"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text=""/>
         </LinearLayout>
     </LinearLayout>
 

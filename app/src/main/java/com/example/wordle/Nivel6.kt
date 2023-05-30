@@ -13,9 +13,9 @@ import okhttp3.Request
 import org.json.JSONArray
 import java.io.IOException
 
-class Nivel5 : AppCompatActivity() {
+class Nivel6 : AppCompatActivity() {
 
-    val tamaÒoPalabra = 5
+    val tama√±oPalabra = 6
     val intentos = 6
     var letras: MutableList<MutableList<Button>> = mutableListOf()
     lateinit var borrar: Button
@@ -35,24 +35,24 @@ class Nivel5 : AppCompatActivity() {
 
     //Representan las letras del teclado
     var abecedario = mutableSetOf(
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'Ò',
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', '√±',
         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
     )
 
-    // Letras habilitadas para las 5 posiciones (todas las letras letrasDisponibles)
+    // Letras habilitadas para las 6 posiciones (todas las letras letrasDisponibles)
     var letrasDisponibles = mutableListOf(
         abecedario.toMutableSet(), abecedario.toMutableSet(),abecedario.toMutableSet(),
-        abecedario.toMutableSet(), abecedario.toMutableSet()
+        abecedario.toMutableSet(), abecedario.toMutableSet(),abecedario.toMutableSet()
     )
 
-    // Letras que no est·n en la palabra
+    // Letras que no est√°n en la palabra
     var noEstan = mutableSetOf<Char>()
-    // Letras que si est·n en la palabra
+    // Letras que si est√°n en la palabra
     var siEstan = mutableSetOf<Char>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nivel5)
+        setContentView(R.layout.activity_nivel6)
 
         //Inicia la lista del teclado
         letrasTeclado = mutableListOf()
@@ -70,7 +70,7 @@ class Nivel5 : AppCompatActivity() {
     }
 
     fun ObtenerPalabra() {
-        val url = "https://api.datamuse.com/words?sp=?????&v=es&max=1000"
+        val url = "https://api.datamuse.com/words?sp=??????&v=es&max=1000"
         val client = OkHttpClient()
 
         val request = Request.Builder()
@@ -104,7 +104,7 @@ class Nivel5 : AppCompatActivity() {
 
     private fun procesarRespuesta(responseData: String?): List<String> {
 
-        //Guarda todas las palabras extraÌdas de la respuesta de la API
+        //Guarda todas las palabras extra√≠das de la respuesta de la API
         palabras = mutableListOf()
 
         try {
@@ -122,18 +122,18 @@ class Nivel5 : AppCompatActivity() {
 
     fun Cuadros() {
         val idCuadros = listOf(
-            listOf(R.id.r00, R.id.r01, R.id.r02, R.id.r03, R.id.r04),
-            listOf(R.id.r10, R.id.r11, R.id.r12, R.id.r13, R.id.r14),
-            listOf(R.id.r20, R.id.r21, R.id.r22, R.id.r23, R.id.r24),
-            listOf(R.id.r30, R.id.r31, R.id.r32, R.id.r33, R.id.r34),
-            listOf(R.id.r40, R.id.r41, R.id.r42, R.id.r43, R.id.r44),
-            listOf(R.id.r50, R.id.r51, R.id.r52, R.id.r53, R.id.r54)
+            listOf(R.id.r00, R.id.r01, R.id.r02, R.id.r03, R.id.r04, R.id.r05),
+            listOf(R.id.r10, R.id.r11, R.id.r12, R.id.r13, R.id.r14, R.id.r15),
+            listOf(R.id.r20, R.id.r21, R.id.r22, R.id.r23, R.id.r24, R.id.r25),
+            listOf(R.id.r30, R.id.r31, R.id.r32, R.id.r33, R.id.r34, R.id.r35),
+            listOf(R.id.r40, R.id.r41, R.id.r42, R.id.r43, R.id.r44, R.id.r45),
+            listOf(R.id.r50, R.id.r51, R.id.r52, R.id.r53, R.id.r54, R.id.r55)
         )
 
         // lista de botones que muestran las letras
         for (fila in 0..5) {
             val listaB = mutableListOf<Button>()
-            for (columna in 0..4) {
+            for (columna in 0..5) {
                 listaB.add(findViewById(idCuadros[fila][columna]))
             }
             letras.add(listaB)
@@ -141,7 +141,7 @@ class Nivel5 : AppCompatActivity() {
 
         val idLetras = listOf(
             R.id.a, R.id.b, R.id.c, R.id.d, R.id.e, R.id.f, R.id.g, R.id.h, R.id.i,
-            R.id.j, R.id.k, R.id.l, R.id.m, R.id.n, R.id.o, R.id.p, R.id.r, R.id.q, R.id.Ò,
+            R.id.j, R.id.k, R.id.l, R.id.m, R.id.n, R.id.o, R.id.p, R.id.r, R.id.q, R.id.√±,
             R.id.s, R.id.t, R.id.u, R.id.v, R.id.w, R.id.x, R.id.y, R.id.z
         )
 
@@ -168,7 +168,7 @@ class Nivel5 : AppCompatActivity() {
     // Listener para el teclado
     inner class teclas : View.OnClickListener {
         override fun onClick(v: View?) {
-            if (columnaActual < tamaÒoPalabra && filaActual < intentos) {
+            if (columnaActual < tama√±oPalabra && filaActual < intentos) {
                 letras[filaActual][columnaActual].text = keyMap[(v as Button)]
                 ++columnaActual
             }
@@ -197,34 +197,34 @@ class Nivel5 : AppCompatActivity() {
         palabrasIntentadas.add(intento)
         // Opcion correcta: cambia el color de las letras
         if (intento.uppercase() == palabraAleatoria.uppercase()) {
-            val intent = Intent(this@Nivel5, Victoria::class.java)
+            val intent = Intent(this@Nivel6, Victoria6::class.java)
             intent.putExtra("palabra_correcta", palabraAleatoria)
             intent.putStringArrayListExtra("palabras_intentadas", ArrayList(palabrasIntentadas))
             intent.putIntegerArrayListExtra("colores_botones", ArrayList(coloresBotones)) // Agregar la lista de identificadores de recursos drawable
             startActivity(intent)
 
             // Cambia el color de las letras a verde
-            for (i in 0 until tamaÒoPalabra)
+            for (i in 0 until tama√±oPalabra)
                 letras[filaActual][i].setBackgroundResource(R.drawable.c_verde)
             filaActual = intentos
         } else {
-            for (i in 0 until tamaÒoPalabra) {
+            for (i in 0 until tama√±oPalabra) {
                 val letraIngresada = letras[filaActual][i].text.toString().uppercase()
                 val letraSecreta = palabraAleatoria[i].toString().uppercase()
 
-                //Si la letra ingresada est· en el lugar correcto
+                //Si la letra ingresada est√° en el lugar correcto
                 if (letraIngresada == letraSecreta) {
                     letras[filaActual][i].setBackgroundResource(R.drawable.c_verde)
                     letrasDisponibles[i] = mutableSetOf(letraSecreta[0])
                     siEstan += letraIngresada[0].lowercaseChar()
 
-                    //Si la letra ingresada no est· en el lugar correcto
+                    //Si la letra ingresada no est√° en el lugar correcto
                 } else if (letraIngresada in palabraAleatoria.uppercase()) {
                     letras[filaActual][i].setBackgroundResource(R.drawable.c_amarillo)
                     letrasDisponibles[i] -= mutableSetOf(letraIngresada[0].lowercaseChar())
                     siEstan += letraIngresada[0].lowercaseChar()
 
-                    //Si la letra ingresada no est· en la palabra
+                    //Si la letra ingresada no est√° en la palabra
                 } else {
                     letras[filaActual][i].setBackgroundResource(R.drawable.c_gris)
                     noEstan += letraIngresada[0].lowercaseChar()
@@ -240,7 +240,7 @@ class Nivel5 : AppCompatActivity() {
 
             noEstan -= siEstan
             // Remueve las letras excluidas
-            for (i in 0 until tamaÒoPalabra)
+            for (i in 0 until tama√±oPalabra)
                 letrasDisponibles[i] -= noEstan
         }
         return true
@@ -249,7 +249,7 @@ class Nivel5 : AppCompatActivity() {
     // Para el enter
     inner class EnterListener : View.OnClickListener {
         override fun onClick(v: View?) {
-            if (filaActual < intentos && columnaActual == tamaÒoPalabra) {
+            if (filaActual < intentos && columnaActual == tama√±oPalabra) {
                 val chequear = RevisarIntento()
                 if (chequear) {
                     ++filaActual
@@ -259,7 +259,7 @@ class Nivel5 : AppCompatActivity() {
 
             // muestra la palabra correcta cuando se llega al numero maximo de intentos
             if (filaActual == intentos) {
-                val perdiste = Intent(this@Nivel5, Derrota::class.java)
+                val perdiste = Intent(this@Nivel6, Derrota6::class.java)
                 perdiste.putStringArrayListExtra("palabras_intentadas", ArrayList(palabrasIntentadas))
                 perdiste.putIntegerArrayListExtra("colores_botones", ArrayList(coloresBotones)) // Agregar la lista de identificadores de recursos drawable
                 startActivity(perdiste)

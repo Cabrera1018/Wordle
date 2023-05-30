@@ -1,17 +1,17 @@
 package com.example.wordle
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import org.w3c.dom.Text
 
-class Victoria : AppCompatActivity() {
+class Victoria4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_victoria)
+        setContentView(R.layout.activity_victoria4)
 
         //Redirigir al menu
         val menu: ImageView = findViewById(R.id.home)
@@ -23,13 +23,13 @@ class Victoria : AppCompatActivity() {
         //Jugar de nuevo
         val deNuevo: Button = findViewById(R.id.bVolverjugar)
         deNuevo.setOnClickListener {
-            val intent = Intent(this, Nivel5::class.java)
+            val intent = Intent(this, Nivel4::class.java)
             startActivity(intent)
         }
 
         //Probar otro nivel
-        val probarOtro: Button = findViewById(R.id.bProbarotro)
-        probarOtro.setOnClickListener {
+        val otroNivel: Button = findViewById(R.id.bProbarotro)
+        otroNivel.setOnClickListener {
             val intent = Intent(this, Niveles::class.java)
             startActivity(intent)
         }
@@ -70,8 +70,8 @@ class Victoria : AppCompatActivity() {
         if (coloresBotones != null) {
             for (i in coloresBotones.indices) {
                 val colorButtonId = coloresBotones[i]
-                val row = (i / 5) + 1
-                val col = (i % 5) + 1
+                val row = (i / 4) + 1
+                val col = (i % 4) + 1
                 val buttonId = resources.getIdentifier("m$row$col", "id", packageName)
                 val button: Button = findViewById(buttonId)
                 button.setBackgroundResource(colorButtonId)
