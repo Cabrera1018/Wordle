@@ -19,16 +19,29 @@
         android:text="NIVELES"
         android:fontFamily="@font/open_sans"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="70sp"
         android:textStyle="bold"/>
+
+
+    <ImageView
+        android:id="@+id/medal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/niveles"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/medal" />
 
     <ImageView
         android:id="@+id/trofeo"
         android:layout_width="225dp"
         android:layout_height="225dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/niveles"
-        app:srcCompat="@drawable/tt" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="60dp"
+        app:srcCompat="@drawable/award" />
 
     <TextView
         android:id="@+id/elige"

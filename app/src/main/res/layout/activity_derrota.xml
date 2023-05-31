@@ -22,9 +22,9 @@
         android:id="@+id/tIncompleto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_below="@id/home"
         android:textStyle="bold"
-        android:textSize="32sp"
+        android:textSize="39sp"
         android:fontFamily="@font/open_sans"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
@@ -32,8 +32,8 @@
 
     <ImageView
         android:id="@+id/iEmoji"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_below="@id/tIncompleto"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
@@ -482,31 +482,33 @@
 
     <Button
         android:id="@+id/bVolverjugar"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idWordle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:background="@drawable/c_amarillo"
         android:text="Intentar otra vez"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/bProbarotro"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/bVolverjugar"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/c_amarillo"
         android:text="Probar otro nivel"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 </RelativeLayout>
