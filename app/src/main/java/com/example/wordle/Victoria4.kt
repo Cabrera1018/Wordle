@@ -17,6 +17,7 @@ class Victoria4 : AppCompatActivity() {
         val menu: ImageView = findViewById(R.id.home)
         menu.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
         }
 
@@ -24,13 +25,16 @@ class Victoria4 : AppCompatActivity() {
         val deNuevo: Button = findViewById(R.id.bVolverjugar)
         deNuevo.setOnClickListener {
             val intent = Intent(this, Nivel4::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // Borra todas las actividades anteriores en la pila
             startActivity(intent)
+            finish() // Opcional: cierra la actividad actual si ya no es necesaria
         }
 
         //Probar otro nivel
         val otroNivel: Button = findViewById(R.id.bProbarotro)
         otroNivel.setOnClickListener {
             val intent = Intent(this, Niveles::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
             startActivity(intent)
         }
 

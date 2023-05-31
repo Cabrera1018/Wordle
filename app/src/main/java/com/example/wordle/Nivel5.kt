@@ -12,6 +12,9 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
 import java.io.IOException
+import java.text.Normalizer
+import java.util.Locale
+import java.util.regex.Pattern
 
 class Nivel5 : AppCompatActivity() {
 
@@ -65,6 +68,7 @@ class Nivel5 : AppCompatActivity() {
         val menu: ImageView = findViewById(R.id.home)
         menu.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
         }
     }
@@ -93,10 +97,13 @@ class Nivel5 : AppCompatActivity() {
                 // Seleccionar una palabra aleatoria de la lista
                 palabraAleatoria = palabras.random()
 
+                // Eliminar acentos de la palabra aleatoria
+                val palabraSinAcento = unaccent(palabraAleatoria)
+
                 // Visualizar el TextView
                 runOnUiThread {
                     val textView = findViewById<TextView>(R.id.wordle)
-                    textView.text = palabraAleatoria
+                    textView.text = palabraSinAcento
                 }
             }
         })
@@ -104,20 +111,27 @@ class Nivel5 : AppCompatActivity() {
 
     private fun procesarRespuesta(responseData: String?): List<String> {
 
-        //Guarda todas las palabras extraídas de la respuesta de la API
-        palabras = mutableListOf()
+        // Guarda todas las palabras extraídas de la respuesta de la API
+        palabras  = mutableListOf<String>()
 
         try {
             val jsonArray = JSONArray(responseData)
             for (i in 0 until jsonArray.length()) {
                 val jsonObject = jsonArray.getJSONObject(i)
                 val palabra = jsonObject.getString("word")
-                (palabras as MutableList<String>).add(palabra)
+                val palabraSinAcento = unaccent(palabra)
+                (palabras as MutableList<String>).add(palabraSinAcento)
             }
         } catch (e: Exception) {
             e.printStackTrace()
         }
         return palabras
+    }
+
+    private fun unaccent(word: String): String {
+        val normalized = Normalizer.normalize(word, Normalizer.Form.NFD)
+        val pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+")
+        return pattern.matcher(normalized).replaceAll("").lowercase(Locale.getDefault())
     }
 
     fun Cuadros() {

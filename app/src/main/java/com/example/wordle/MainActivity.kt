@@ -23,5 +23,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnSalir: Button = findViewById(R.id.bSalir)
+        btnSalir.setOnClickListener {
+            // Finalizar la actividad actual y salir de la aplicación
+            finish()
+            System.exit(0)
+        }
+
     }
 }
