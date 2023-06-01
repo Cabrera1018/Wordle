@@ -103,8 +103,8 @@ class Nivel4 : AppCompatActivity() {
 
                 // Visualizar el TextView
                 runOnUiThread {
-                    val textView = findViewById<TextView>(R.id.wordle)
-                    textView.text = palabraSinAcento
+                    //val textView = findViewById<TextView>(R.id.wordle)
+                    //textView.text = palabraSinAcento
                 }
             }
         })
