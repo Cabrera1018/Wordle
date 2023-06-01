@@ -118,7 +118,7 @@
         android:adjustViewBounds="true"
         android:background="@drawable/c_azul"
         android:padding="3dp"
-        app:srcCompat="@drawable/home"
+        app:srcCompat="@drawable/arrow"
         android:contentDescription="Trofeo"/>
 
 

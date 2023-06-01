@@ -14,8 +14,7 @@ class Informacion : AppCompatActivity() {
         val menu: ImageView = findViewById(R.id.home)
 
         menu.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
     }
 }

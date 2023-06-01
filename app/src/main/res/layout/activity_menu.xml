@@ -5,17 +5,24 @@
     tools:context=".MainActivity"
     android:background="@color/fondo">
 
+
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
     <TextView
         android:id="@+id/tWordle"
         android:layout_width="wrap_content"
-        android:layout_height="120dp"
+        android:layout_height="110dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="75dp"
         android:textStyle="bold"
         android:text="WORDLE"
         android:fontFamily="@font/open_sans"
         android:textColor="@color/white"
-        android:textSize="80sp" />
+        android:textSize="90sp" />
 
     <TextView
         android:id="@+id/tFrase"
@@ -52,7 +59,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:background="@drawable/boton_deforme1"
+        android:background="@drawable/boton_selector"
         android:padding="15dp"
         android:text="Jugar"
         android:fontFamily="@font/open_sans"
@@ -88,7 +95,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:background="@drawable/boton_deforme1"
+        android:background="@drawable/boton_selector"
         android:padding="15dp"
         android:text="Salir"
         android:fontFamily="@font/open_sans"

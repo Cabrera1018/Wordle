@@ -19,7 +19,7 @@ import java.util.regex.Pattern
 
 class Nivel4 : AppCompatActivity() {
 
-    val tamañoPalabra = 4
+    val sizePalabra = 4
     val intentos = 6
     var letras: MutableList<MutableList<Button>> = mutableListOf()
     lateinit var borrar: Button
@@ -72,10 +72,16 @@ class Nivel4 : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
         }
+
+        //Hacia atras
+        val atras: ImageView = findViewById(R.id.back)
+        atras.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     fun ObtenerPalabra() {
-        val url = "https://api.datamuse.com/words?sp=????&v=es&max=1000"
+        val url = "https://api.datamuse.com/words?sp=????&v=es&max=4000"
         val client = OkHttpClient()
 
         val request = Request.Builder()
@@ -103,8 +109,8 @@ class Nivel4 : AppCompatActivity() {
 
                 // Visualizar el TextView
                 runOnUiThread {
-                    //val textView = findViewById<TextView>(R.id.wordle)
-                    //textView.text = palabraSinAcento
+                    val textView = findViewById<TextView>(R.id.wordle)
+                    textView.text = palabraSinAcento
                 }
             }
         })
@@ -181,7 +187,7 @@ class Nivel4 : AppCompatActivity() {
     // Listener para el teclado
     inner class teclas : View.OnClickListener {
         override fun onClick(v: View?) {
-            if (columnaActual < tamañoPalabra && filaActual < intentos) {
+            if (columnaActual < sizePalabra && filaActual < intentos) {
                 letras[filaActual][columnaActual].text = keyMap[(v as Button)]
                 ++columnaActual
             }
@@ -218,11 +224,11 @@ class Nivel4 : AppCompatActivity() {
 
 
             // Cambia el color de las letras a verde
-            for (i in 0 until tamañoPalabra)
+            for (i in 0 until sizePalabra)
                 letras[filaActual][i].setBackgroundResource(R.drawable.c_verde)
             filaActual = intentos
         } else {
-            for (i in 0 until tamañoPalabra) {
+            for (i in 0 until sizePalabra) {
                 val letraIngresada = letras[filaActual][i].text.toString().uppercase()
                 val letraSecreta = palabraAleatoria[i].toString().uppercase()
 
@@ -254,7 +260,7 @@ class Nivel4 : AppCompatActivity() {
 
             noEstan -= siEstan
             // Remueve las letras excluidas
-            for (i in 0 until tamañoPalabra)
+            for (i in 0 until sizePalabra)
                 letrasDisponibles[i] -= noEstan
         }
         return true
@@ -263,7 +269,7 @@ class Nivel4 : AppCompatActivity() {
     // Para el enter
     inner class EnterListener : View.OnClickListener {
         override fun onClick(v: View?) {
-            if (filaActual < intentos && columnaActual == tamañoPalabra) {
+            if (filaActual < intentos && columnaActual == sizePalabra) {
                 val chequear = RevisarIntento()
                 if (chequear) {
                     ++filaActual

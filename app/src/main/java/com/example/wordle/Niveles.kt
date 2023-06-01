@@ -10,13 +10,14 @@ class Niveles : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_niveles)
-        val menu: ImageView = findViewById(R.id.home)
+        val atras: ImageView = findViewById(R.id.home)
         val nivel4: Button = findViewById(R.id.letras4)
         val nivel5: Button = findViewById(R.id.letras5)
         val nivel6: Button = findViewById(R.id.letras6)
 
-        menu.setOnClickListener {
+        atras.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
         }
 
